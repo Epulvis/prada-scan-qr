@@ -4,12 +4,13 @@ import ScanPage from './pages/ScanPage';
 
 function App() {
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/scan" element={<ScanPage />} />
-            </Routes>
-        </BrowserRouter>
+      <BrowserRouter basename="/prada-scan-qr">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/scan" element={<ScanPage />} />
+          <Route path="*" element={<h1>404 Not Found</h1>} />
+        </Routes>
+      </BrowserRouter>
     );
 }
 
